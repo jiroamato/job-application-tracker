@@ -15,7 +15,7 @@ export default function Navbar() {
         </Link>
         <div className="flex items-center gap-4">
           <Link href="/sign-in">
-            <Button variant="ghost" className="text-gray-700 hover;text-black">
+            <Button variant="ghost" className="text-gray-700 hover:text-black">
               Log In
             </Button>
           </Link>

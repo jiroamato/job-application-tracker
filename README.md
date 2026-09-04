@@ -1,36 +1,67 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Job Application Tracker
+
+A web app for keeping your job search in one place. Track every application on a
+Kanban board, watch it move from applied to interview to offer, and stop losing
+roles in a spreadsheet.
+
+## Status
+
+Early development. The marketing landing page is built; the product itself is not.
+
+| Route       | State                                          |
+| ----------- | ---------------------------------------------- |
+| `/`         | Landing page - hero, screenshot tabs, features |
+| `/sign-in`  | Placeholder                                    |
+| `/sign-up`  | Placeholder                                    |
+| `/dashboard`| Placeholder                                    |
+
+## Tech Stack
+
+- [Next.js 16](https://nextjs.org) (App Router) with React 19
+- TypeScript
+- [Tailwind CSS 4](https://tailwindcss.com)
+- [shadcn/ui](https://ui.shadcn.com) on [Base UI](https://base-ui.com)
+- [lucide-react](https://lucide.dev) for icons
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Scripts
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Command         | Description                        |
+| --------------- | ---------------------------------- |
+| `npm run dev`   | Start the development server       |
+| `npm run build` | Production build                   |
+| `npm run start` | Serve the production build         |
+| `npm run lint`  | Run ESLint                         |
 
-## Learn More
+## Project Structure
 
-To learn more about Next.js, take a look at the following resources:
+```
+app/                 App Router routes and root layout
+  page.tsx           Landing page
+  dashboard/         Dashboard (placeholder)
+  sign-in/           Sign in (placeholder)
+  sign-up/           Sign up (placeholder)
+components/          Shared components
+  navbar.tsx         Top navigation
+  image-tabs.tsx     Tabbed product screenshots on the landing page
+  ui/                shadcn/ui primitives
+lib/utils.ts         Helpers (cn)
+public/hero-images/  Landing page screenshots
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Contributing
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Branches and PR titles follow [Conventional Commits](https://www.conventionalcommits.org):
+`type(scope): summary`. Feature branches merge into `dev`; `dev` merges into `main`.
 
-## Deploy on Vercel
+## License
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+MIT - see [LICENSE](LICENSE).
