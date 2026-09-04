@@ -15,7 +15,7 @@ export default function ImageTabs() {
             <Button
               onClick={() => setActiveTab("organize")}
               className={
-                `rounded-lg px-6 py-3 text-sm fond-medium transition-colors
+                `rounded-lg px-6 py-3 text-sm font-medium transition-colors
                 ${activeTab === "organize" 
                 ? "bg-primary text-white" 
                 : "bg-gray-100 text-gray-700 hover:bg-gray-200"}`}
@@ -25,7 +25,7 @@ export default function ImageTabs() {
             <Button
               onClick={() => setActiveTab("hired")}
               className={
-                `rounded-lg px-6 py-3 text-sm fond-medium transition-colors
+                `rounded-lg px-6 py-3 text-sm font-medium transition-colors
                 ${activeTab === "hired" 
                 ? "bg-primary text-white" 
                 : "bg-gray-100 text-gray-700 hover:bg-gray-200"}`}
@@ -35,7 +35,7 @@ export default function ImageTabs() {
             <Button
               onClick={() => setActiveTab("board")}
               className={
-                `rounded-lg px-6 py-3 text-sm fond-medium transition-colors
+                `rounded-lg px-6 py-3 text-sm font-medium transition-colors
                 ${activeTab === "board" 
                 ? "bg-primary text-white" 
                 : "bg-gray-100 text-gray-700 hover:bg-gray-200"}`}
@@ -43,7 +43,7 @@ export default function ImageTabs() {
               Manage Boards
             </Button>
           </div>
-        <div className="relative mx-auto max-w-5xl overflow-hidden rounded-lg border-gray-200 shadow-xl">
+        <div className="relative mx-auto max-w-5xl overflow-hidden rounded-lg border border-gray-200 shadow-xl">
           {activeTab === "organize" && (
             <Image
               src="/hero-images/hero1.png"
@@ -56,7 +56,7 @@ export default function ImageTabs() {
           {activeTab === "hired" && (  
             <Image
               src="/hero-images/hero2.png"
-              alt="Organize Applications"
+              alt="Get Hired"
               width={1200}
               height={800}
             />
@@ -65,7 +65,7 @@ export default function ImageTabs() {
           {activeTab === "board" && (
             <Image
               src="/hero-images/hero3.png"
-              alt="Organize Applications"
+              alt="Manage Boards"
               width={1200}
               height={800}
             />
