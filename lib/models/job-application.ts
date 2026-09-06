@@ -1,4 +1,3 @@
-import { StringToBoolean } from "class-variance-authority/types";
 import mongoose, {Schema, Document} from "mongoose";
 
 export interface IJobApplication extends Document {
