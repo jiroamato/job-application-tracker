@@ -131,7 +131,7 @@ function SortableJobCard({
 }
 
 export default function KanbanBoard({ board }: KanbanBoardProps) {
-  const { columns, moveJob } = useBoard(board);
+  const { columns } = useBoard(board);
 
   const sortedColumns = columns?.sort((a, b) => a.order - b.order) || [];
   return (

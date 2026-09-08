@@ -2,7 +2,7 @@
 
 import { Column, JobApplication } from "@/lib/models/models.types";
 import { Card, CardContent } from "./ui/card";
-import { Edit2, ExternalLink, MoreVertical, Plus, Trash2 } from "lucide-react";
+import { Edit2, ExternalLink, MoreVertical, Trash2 } from "lucide-react";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -21,7 +21,6 @@ import {
   DialogFooter,
   DialogHeader,
   DialogTitle,
-  DialogTrigger,
 } from "./ui/dialog";
 import { Label } from "./ui/label";
 import { Input } from "./ui/input";
@@ -50,7 +49,7 @@ export default function JobApplicationCard({
     description: job.description || "",
   });
 
-  async function handleUpdate(e: React.ChangeEvent) {
+  async function handleUpdate(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     try {
       const result = await updateJobApplication(job._id, {
@@ -86,6 +85,10 @@ export default function JobApplicationCard({
       const result = await updateJobApplication(job._id, {
         columnId: newColumnId,
       });
+
+      if (result.error) {
+        console.error("Failed to move job application: ", result.error);
+      }
     } catch (err) {
       console.error("Failed to move job application: ", err);
     }
