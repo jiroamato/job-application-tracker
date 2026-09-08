@@ -48,6 +48,6 @@ export async function signOut() {
   });
 
   if (result.success) {
-    redirect("/signIn");
+    redirect("/sign-in");
   }
 }
