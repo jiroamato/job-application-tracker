@@ -41,7 +41,7 @@ export default function CreateJobApplicationDialog({
   const [formData, setFormData] = useState(INITIAL_FORM_DATA);
 
   // Server action
-  async function handleSubmit(e: React.InputEvent) {
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
 
     try {

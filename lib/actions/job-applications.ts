@@ -4,7 +4,6 @@ import { revalidatePath } from "next/cache";
 import { getSession } from "../auth/auth";
 import connectDB from "../db";
 import { Board, Column, JobApplication } from "../models";
-import column from "../models/column";
 
 interface JobApplicationData {
   company: string;
